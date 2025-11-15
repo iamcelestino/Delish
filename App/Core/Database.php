@@ -28,7 +28,6 @@ class Database implements DatabaseInterface
                 die('Database connection failed: ' . $e->getMessage());
             }
         }
-
         return self::$pdo;
     }
     public function query(string $query, array $queryData, string $queryDataType = "object"): array|bool
@@ -42,23 +41,4 @@ class Database implements DatabaseInterface
         return false;
     }
 
-    public function lastInsertId(): string
-    {
-        return $this->connection()->lastInsertId();
-    }
-
-    public function beginTransation(): void
-    {
-         $this->connection()->beginTransaction();
-    }
-
-    public function commit(): void
-    {
-        $this->connection()->commit();
-    }
-
-    public function rollBack(): void
-    {
-        $this->connection()->rollBack();
-    }
 }

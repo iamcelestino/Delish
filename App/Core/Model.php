@@ -53,7 +53,7 @@ abstract class Model extends Database
         return $this->query($query, $data);
     }
 
-    public function upddate(mixed $id, array $data): mixed
+    public function update(mixed $id, array $data): mixed
     {
         $string = '';
         foreach($data as $key => $value) {
@@ -95,6 +95,26 @@ abstract class Model extends Database
         $query =  "DELETE FROM $this->table WHERE $primaryKey = :$primaryKey";
         $data[$primaryKey] = $id;
         return $this->query($query, $data);
+    }
+
+    public function lastInsertedId(): int|string
+    {
+        return $this->connection()->lastInsertId();
+    }
+
+    public function beginTransation(): void
+    {
+        $this->connection()->beginTransaction();
+    }
+
+    public function commit(): void
+    {
+        $this->connection()->commit();
+    }
+
+    public function rollBack(): void
+    {
+        $this->connection()->rollBack();
     }
 
 }

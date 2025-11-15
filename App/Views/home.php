@@ -1,4 +1,3 @@
-<?php $config = require __DIR__ . '/../Core/config.php';?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,6 @@
     <link rel="stylesheet" href="<?=$config['assets_url']?>">
 </head>
 <body>
-    <h1>HELLO, MOM</h1>
+    <h1>HEY, MOM</h1>
 </body>
 </html>

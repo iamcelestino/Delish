@@ -12,6 +12,7 @@ class Container
     }
 
     public function resolve(string $class) {
+        
         $reflector = new ReflectionClass($class);
 
         if (!$reflector->isInstantiable()) {
