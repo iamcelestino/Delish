@@ -17,7 +17,7 @@ abstract class Model extends Database
         }
     }
 
-    protected function where(string $column, string $value): array|object|bool
+    public function where(string $column, string $value): array|object
     {
         $column = addslashes($column);
         $query = "SELECT * FROM " . $this->table . " WHERE " . $column . " = :value";
@@ -28,7 +28,7 @@ abstract class Model extends Database
         return $data;
     }
 
-    protected function first(string $column, string $value): array|object|bool
+    public function first(string $column, string $value): array|object
     {
         $column = addslashes($column);
         $query = "SELECT * FROM " . $this->table . " WHERE " . $column . " = :value";
@@ -43,7 +43,7 @@ abstract class Model extends Database
         return $this->query($query, []);
     }
 
-    public function insert(array $data): bool
+    public function insert(array $data): array|bool
     {
         $keys = array_keys($data);
         $columns = implode(',', $keys);
@@ -72,7 +72,7 @@ abstract class Model extends Database
 
     }
 
-    protected function getPrimaryKey(): string|int
+    public function getPrimaryKey(): string|int
     {
         static $primaryKeys = [];
         if(!isset($primaryKeys[$this->table])) {

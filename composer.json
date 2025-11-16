@@ -1,6 +1,6 @@
 {
-    "name": "dell/app-note-taking",
-    "description": "takes notes and manage your notes easily",
+    "name": "dell/delish",
+    "description": "",
     "type": "project",
     "autoload": {
         "psr-4": {

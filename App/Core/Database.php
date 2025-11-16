@@ -9,7 +9,7 @@ use PDOException;
 class Database implements DatabaseInterface
 {
     private static ?PDO $pdo = null;
-    private string $dsn = "mysql:host= . config['db']['host'] . ;dbname={$config['db']['name']};charset=utf8mb4";
+    private string $dsn = "mysql:host=127.0.0.1;dbname=app_rant;charset=utf8mb4";
 
     public function connection(): PDO
     {
@@ -17,8 +17,8 @@ class Database implements DatabaseInterface
             try {
                 self::$pdo = new PDO(
                     $this->dsn,
-                    config['db']['user'],
-                    config['db']['pass'],
+                    'root',
+                    '',
                     [
                         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
                         PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
