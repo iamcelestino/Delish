@@ -21,7 +21,7 @@
         </div>
         <div id="nav" class="">
             <div id="logo" class="">
-                
+                <img src="" alt="">
             </div>
             <nav>
                 <ul>
