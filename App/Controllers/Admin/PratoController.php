@@ -1,7 +1,7 @@
 <?php 
 declare(strict_types=1);
 
-namespace App\Controllers;
+namespace App\Controllers\Admin;
 use App\Core\Controller;
 use App\Services\PratoService;
 

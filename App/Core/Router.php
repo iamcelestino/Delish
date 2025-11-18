@@ -27,6 +27,11 @@ class Router
         $this->routes['POST'][$path] = $handler;
     }
 
+    public function group(): void 
+    {
+        
+    }
+
     public function dispatch(string $method, string $uri): void
     {
         $uri = parse_url($uri, PHP_URL_PATH);

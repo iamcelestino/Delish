@@ -38,11 +38,19 @@
                             <label for="" class="">descricao</label>
                             <input type="descricao" id="" name="descricao">
 
-                            <select name="categoria" id="">
+                            <!-- <select name="categoria" id="">
                                 <option value="">Selecione uma hora</option>
                                 <option value="Matabicho">Matabicho</option>
                                 <option value="Almoco">Almoco</option>
                                 <option value="Jantar">Jantar</option>
+                            </select> -->
+
+                            <select name="categoria" id="">
+                                <option value="">Selecione a categoria</option>
+                                <option value="Entrada ">Matabicho</option>
+                                <option value="prato_principal">Almoco</option>
+                                <option value="sobremesa">Jantar</option>
+                                <option value="bebida">Jantar</option>
                             </select>
 
                             <button type="submit" class="">Adionar ao meu</button>

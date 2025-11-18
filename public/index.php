@@ -4,7 +4,8 @@ require __DIR__ . '/../vendor/autoload.php';
 use Dotenv\Dotenv;
 use App\Core\{Router, Config};
 use App\Core\Container;
-use App\Controllers\{HomeController, PratoController, ReservaController};
+use App\Controllers\Site\{HomeController, ReservaController as SiteReservaController};
+use App\Controllers\Admin\{PratoController, ReservaController as AdminReservaController};
 use App\Contracts\{ReservaInterface, ClienteInterface, MesaInterface, PratoInterface};
 use App\Models\{Cliente, Mesa, Prato, Reserva};
 
@@ -21,13 +22,16 @@ $container->bind(MesaInterface::class, Mesa::class);
 $container->bind(PratoInterface::class, Prato::class);
 
 $router = new Router($container);
-$router->get('/', [HomeController::class, 'index']);
-$router->get('/reservas', [ReservaController::class, 'index']);
-$router->get('/reservas/criar', [ReservaController::class, 'index']);
-$router->post('/reserva/create', [ReservaController::class, 'create']);
-$router->get('/prato', [PratoController::class, 'index']);
-$router->post('/prato/create', [PratoController::class, 'create']);
 
+//user Controllers
+$router->get('/', [HomeController::class, 'index']);
+$router->get('/reservas', [SiteReservaController::class, 'index']);
+$router->post('/reserva/create', [SiteReservaController::class, 'create']);
+
+//admin controllers
+$router->get('/admin/reservas', [AdminReservaController::class, 'index']);
+$router->get('/admin/prato', [PratoController::class, 'index']);
+$router->post('/admin/prato/create', [PratoController::class, 'create']);
 
 $method = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];
