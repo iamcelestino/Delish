@@ -26,12 +26,12 @@ $router = new Router($container);
 //user Controllers
 $router->get('/', [HomeController::class, 'index']);
 $router->get('/reservas', [SiteReservaController::class, 'index']);
-$router->post('/reserva/create', [SiteReservaController::class, 'create']);
+$router->post('/reservas/create', [SiteReservaController::class, 'create']);
 
 //admin controllers
 $router->get('/admin/reservas', [AdminReservaController::class, 'index']);
-$router->get('/admin/prato', [PratoController::class, 'index']);
-$router->post('/admin/prato/create', [PratoController::class, 'create']);
+$router->get('/admin/pratos', [PratoController::class, 'index']);
+$router->post('/admin/pratos/create', [PratoController::class, 'create']);
 
 $method = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];

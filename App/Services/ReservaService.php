@@ -49,6 +49,16 @@ class ReservaService
         }
     }
 
+    public function getReservas(): array|object
+    {
+        return $this->reserva->getReservas();
+    }
+
+    public function getReservasPendentes(): array|object
+    {
+        return $this->reserva->getReservasPendentes();
+    }
+
     public function update(int $id, $dadosReserva): void
     {
 
