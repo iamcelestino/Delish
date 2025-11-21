@@ -7,12 +7,13 @@ use App\Services\PratoService;
 
 class PratoController extends Controller
 {
-    public function __construct(protected PratoService $prato)
-    {}
+    public function __construct(
+        protected PratoService $prato
+    ){}
 
     public function index(): void
     {
-        $this->view('pratos', []);
+        $this->view('Admin/pratos', []);
     }
 
     public function create(): void

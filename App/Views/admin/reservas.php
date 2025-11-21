@@ -50,13 +50,17 @@
                                 <td class="px-6 py-4 whitespace-nowrap"><?= $reserva->data_reserva ?></td>
                                 <td class="px-6 py-4 whitespace-nowrap"><?= $reserva->hora_reserva?></td>
                                 <td class="px-6 py-4 whitespace-nowrap"><?= $reserva->pessoas ?></td>
-                                <td class="px-6 py-4 whitespace-nowrap"><?= $reserva->mesa_status?></td>
+                                <td class="px-6 py-4 whitespace-nowrap"><?= $reserva->mesa_status?></td> 
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <a href="/admin/pedidos/create/<?= $reserva->id_reserva ?>">Fazer Pedido</a>
+                                </td>
                             </tr>
                     </tbody>
                         <?php endforeach ?>
                     <?php else: ?>
                         <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
+
                                 <td class="px-6 py-4 whitespace-nowrap"></td>
                                 <td class="px-6 py-4 whitespace-nowrap"></td>
                                 <td class="px-6 py-4 whitespace-nowrap"></td>

@@ -4,10 +4,27 @@ require __DIR__ . '/../vendor/autoload.php';
 use Dotenv\Dotenv;
 use App\Core\{Router, Config};
 use App\Core\Container;
-use App\Controllers\Site\{HomeController, ReservaController as SiteReservaController};
-use App\Controllers\Admin\{PratoController, ReservaController as AdminReservaController};
-use App\Contracts\{ReservaInterface, ClienteInterface, MesaInterface, PratoInterface};
-use App\Models\{Cliente, Mesa, Prato, Reserva};
+use App\Controllers\Site\{
+	HomeController,
+	ContactoController, 
+	SobreController,
+	ReservaController as SiteReservaController, 
+	PratoController as SitePratoController
+};
+
+use App\Controllers\Admin\{
+	PratoController, 
+	ReservaController as AdminReservaController, 
+	PedidoController
+};
+
+use App\Contracts\{ReservaInterface, 
+	ClienteInterface,
+	MesaInterface,
+	PratoInterface, 
+	PedidoInterface
+};
+use App\Models\{Cliente, Mesa, Prato, Reserva, Pedido};
 
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
@@ -20,6 +37,7 @@ $container->bind(ReservaInterface::class, Reserva::class);
 $container->bind(ClienteInterface::class, Cliente::class);
 $container->bind(MesaInterface::class, Mesa::class);
 $container->bind(PratoInterface::class, Prato::class);
+$container->bind(PedidoInterface::class, Pedido::class);
 
 $router = new Router($container);
 
@@ -27,11 +45,17 @@ $router = new Router($container);
 $router->get('/', [HomeController::class, 'index']);
 $router->get('/reservas', [SiteReservaController::class, 'index']);
 $router->post('/reservas/create', [SiteReservaController::class, 'create']);
+$router->get('/pratos', [SitePratoController::class, 'index']);
+$router->get('/sobre', [SobreController::class, 'index']);
+$router->get('/contacto', [ContactoController::class, 'index']);
 
 //admin controllers
 $router->get('/admin/reservas', [AdminReservaController::class, 'index']);
 $router->get('/admin/pratos', [PratoController::class, 'index']);
 $router->post('/admin/pratos/create', [PratoController::class, 'create']);
+$router->get('/admin/pedidos', [PedidoController::class, 'index']);
+$router->get('/admin/pedidos/create/{id}', [PedidoController::class, 'create']);
+$router->post('/admin/pedidos/create/{id}', [PedidoController::class, 'create']);
 
 $method = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];

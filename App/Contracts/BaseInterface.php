@@ -5,7 +5,7 @@ namespace App\Contracts;
 
 interface BaseInterface
 {
-    public function where(string $column, string $value): array|object;
+    public function where(string $column, mixed $value): array|object;
     public function first(string $column, string $value): array|object;
     public function all():array|object|bool;
     public function insert(array $data): array|bool;

@@ -14,9 +14,8 @@ class ReservaController extends Controller
     public function index(): void
     {
         $reservas = $this->reservas->getReservas();
-        print_r($reservas);
 
-        $this->view('admin/reservas', [
+        $this->view('Admin/reservas', [
             'reservas' => $reservas
         ]);
     }

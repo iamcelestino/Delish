@@ -17,7 +17,7 @@ abstract class Model extends Database
         }
     }
 
-    public function where(string $column, string $value): array|object
+    public function where(string $column, mixed $value): array|object
     {
         $column = addslashes($column);
         $query = "SELECT * FROM " . $this->table . " WHERE " . $column . " = :value";

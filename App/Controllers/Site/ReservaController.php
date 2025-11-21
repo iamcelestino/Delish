@@ -13,7 +13,7 @@ class ReservaController extends Controller
     
     public function index(): void
     {
-        $this->view('reservas', []);
+        $this->view('Site/reservas', []);
     }
 
     public function create(): void
