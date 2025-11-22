@@ -15,7 +15,7 @@ use App\Controllers\Site\{
 use App\Controllers\Admin\{
 	PratoController, 
 	ReservaController as AdminReservaController, 
-	PedidoController
+	PedidoController, DashboardController
 };
 
 use App\Contracts\{ReservaInterface, 
@@ -63,6 +63,7 @@ $router->post('/admin/pratos/create', [PratoController::class, 'create']);
 $router->get('/admin/pedidos', [PedidoController::class, 'index']);
 $router->get('/admin/pedidos/create/{id}', [PedidoController::class, 'create']);
 $router->post('/admin/pedidos/create/{id}', [PedidoController::class, 'create']);
+$router->get('/admin/dashboard', [DashboardController::class, 'index']);
 
 $method = $_SERVER['REQUEST_METHOD'];
 $uri = $_SERVER['REQUEST_URI'];
