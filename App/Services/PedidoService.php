@@ -33,8 +33,6 @@ class PedidoService
             $this->pedido->insert($dadosPedido);
             $idPedido = $this->pedido->lastInsertedId();
 
-            print_r($idPedido);
-
             if(!is_numeric($idPedido)) {
                 throw new Exception("Insert de pedido não retornou um ID. Recebido: " . print_r($idPedido, true));
             }

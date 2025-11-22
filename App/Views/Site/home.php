@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/src/output.css">
 </head>
 <body>
-    <header class="bg-black">
+    <header class="bg-black text-white">
         <div id="top_bar" class="flex items-center justify-between bg-red-600 text-white py-2">
             <div class="flex items-center">
                 <P class="">Mon-Wen: 11a-9p</P>
