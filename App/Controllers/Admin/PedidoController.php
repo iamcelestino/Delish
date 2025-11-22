@@ -3,14 +3,20 @@ declare(strict_types=1);
 
 namespace App\Controllers\Admin;
 
-use App\Contracts\{PedidoInterface, ReservaInterface, PratoInterface};
+use App\Services\PedidoService;
+
+use App\Contracts\{
+    PedidoInterface, 
+    ReservaInterface, 
+    PratoInterface
+};
 use App\Core\Controller;
 
 class PedidoController extends Controller
 {
     public function __construct(
         protected ReservaInterface $reservas,
-        protected PedidoInterface $pedido,
+        protected PedidoService $pedido,
         protected PratoInterface $prato
     ){}
 
@@ -22,10 +28,9 @@ class PedidoController extends Controller
     public function create(int $id_reserva): void
     {
         $pratos = $this->prato->all();
-        print($id_reserva);
 
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
-            print_r($_POST);
+            $this->pedido->create($id_reserva, $_POST);
         }
 
         $this->view('Admin/criar_pedido', [

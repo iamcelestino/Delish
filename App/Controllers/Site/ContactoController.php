@@ -12,5 +12,4 @@ class ContactoController extends Controller
 	{
 		$this->view('Site/contacto', []);	
 	}
-
 }

@@ -22,9 +22,15 @@ use App\Contracts\{ReservaInterface,
 	ClienteInterface,
 	MesaInterface,
 	PratoInterface, 
-	PedidoInterface
+	PedidoInterface,
+	ItemPedidoInterface
 };
-use App\Models\{Cliente, Mesa, Prato, Reserva, Pedido};
+
+use App\Models\{
+	Cliente, Mesa, 
+	Prato, Reserva, 
+	Pedido, ItemPedido
+};
 
 $dotenv = Dotenv::createImmutable(dirname(__DIR__));
 $dotenv->load();
@@ -38,6 +44,7 @@ $container->bind(ClienteInterface::class, Cliente::class);
 $container->bind(MesaInterface::class, Mesa::class);
 $container->bind(PratoInterface::class, Prato::class);
 $container->bind(PedidoInterface::class, Pedido::class);
+$container->bind(ItemPedidoInterface::class, ItemPedido::class);
 
 $router = new Router($container);
 

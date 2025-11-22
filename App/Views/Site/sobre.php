@@ -51,7 +51,7 @@
            <div class="container">
             <div class="">
                 <div class="">
-                    <h4 class="bg-red-600"></h4>
+                    <h4 class="bg-orange-700 text-xl text-orange-200 ">Comida Deliciosa para uma vida saudavel</h4>
                     <h2 class="">
                         Comida Deliciosa para uma vida saudavel
                     </h4>
@@ -59,9 +59,9 @@
                         <div class="">
                             
                         </div>
-                        <div>
+                        <div class="">
                             <h5 class="">Comida de Qualidade</h5>
-                            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+                            <p class="">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
                         </div>
                     </div>
                     <div class="">

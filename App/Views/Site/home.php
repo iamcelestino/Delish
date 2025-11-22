@@ -7,43 +7,43 @@
     <link rel="stylesheet" href="/src/output.css">
 </head>
 <body>
-    <header>
-        <div id="top_bar" class="">
-            <div class="">
-                <P>Mon-Wen: 11a-9p</P>
-                <p>Thur-Sat: 10a-10p</p>
+    <header class="bg-black">
+        <div id="top_bar" class="flex items-center justify-between bg-red-600 text-white py-2">
+            <div class="flex items-center">
+                <P class="">Mon-Wen: 11a-9p</P>
+                <p class="">Thur-Sat: 10a-10p</p>
             </div>
-            <div class="">
-                <p>reserva@delish.com</p>
-                <p>943 04 72 42</p>
-                <p>Bairro 4 de Abril proximo a estacao eletrica</p>
+            <div class="flex items-center">
+                <p class="">reserva@delish.com</p>
+                <p class="">943 04 72 42</p>
+                <p class="">Bairro 4 de Abril proximo a estacao eletrica</p>
             </div>
         </div>
-        <div id="nav" class="">
+        <div id="nav" class="flex items-center justify-between">
             <div id="logo" class="">
-                <img src="" alt="">
+                <img src="/images/logo.svg" alt="">
             </div>
-            <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Menu</a></li>
-                    <li><a href="">Reservas</a></li>
-                    <li><a href="">Equipa</a></li>
-                    <li><a href="">Sobre Nos</a></li>
-                    <li><a href="">Contacto</a></li>
+            <nav class="">
+                <ul class="">
+                    <li class=""><a href="">Home</a></li>
+                    <li class=""><a href="">Menu</a></li>
+                    <li class=""><a href="">Reservas</a></li>
+                    <li class=""><a href="">Equipa</a></li>
+                    <li class=""><a href="">Sobre Nos</a></li>
+                    <li class=""><a href="">Contacto</a></li>
                 </ul>
             </nav>
             <div class="">
-                <ul>
-                    <li><a href="">Pedir Online</a></li>
-                    <li><a href="">Reservar Mesa</a></li>
+                <ul class="flex">
+                    <li class="bg-white font-bold p-4 text-black font-bold"><a href="">Pedir Online</a></li>
+                    <li class="bg-red-600 font-bold text-white p-4"><a href="">Reservar Mesa</a></li>
                 </ul>
             </div>
         </div>
-        <div id="" class="">
-            <h4></h4>
-            <p></p>
-            <a href="">Ver Menu</a>
+        <div id="" class=""> 
+            <h4 class=""></h4>
+            <p class=""></p>
+            <a class="font-medium border-2 text-white" href="">Ver Menu</a>
         </div>
         <div class="">
             <h3 class="">
@@ -64,39 +64,39 @@
         </div>
     </header>
     <main class="">
-       <section class="">
+       <section class="bg-gray-200">
             <div class="">
-                <div class="">
+                <div class="flex gap-10">
                     <div class="">
-                        <img src="" alt=""></img>
-                        <div>
-                            <h1>Produtos Frescos</h1>
+                        <img src="/images/jed-owen-O4wSmNb6w18-unsplash.jpg" alt=""></img>
+                        <div class="p-4 bg-white">
+                            <h1 class="font-bold">Produtos Frescos</h1>
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
-                            <a href="">Reservar Mesa</a>
+                            <a class="text-red-600 font-medium underline" href="">RESERVAR MESA</a>
                         </div>
                     </div>
                     <div class="">
-                        <img src="" alt=""></img>
-                        <div>
-                            <h1>Chefes capacitados</h1>
+                        <img src="/images/jed-owen-O4wSmNb6w18-unsplash.jpg" alt=""></img>
+                        <div class="p-4 bg-white">
+                            <h1 class="font-bold">Chefes capacitados</h1>
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
-                            <a href="">Reservar Mesa</a>
+                            <a class="text-red-600 font-medium underline" href="">RESERVAR MESA</a>
                         </div>
                     </div>
                     <div class="">
-                        <img src="" alt="">Bebidas</img>
-                        <div>
-                            <h1>Produtos Frescos</h1>
+                        <img src="/images/jed-owen-O4wSmNb6w18-unsplash.jpg" alt="">
+                        <div class="p-4 bg-white">
+                            <h1 class="font-bold">Bebidas</h1>
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
-                            <a href="">Reservar Mesa</a>
+                            <a class="text-red-600 font-medium underline" href="">RESERVAR MESA</a>
                         </div>
                     </div>
                     <div class="">
-                        <img src="" alt="">Alimentos Frescos</img>
-                        <div>
-                            <h1>Produtos Frescos</h1>
+                        <img src="/images/jed-owen-O4wSmNb6w18-unsplash.jpg" alt="">
+                        <div class="p-4 bg-white">
+                            <h3 class="font-bold">Alimentos Frescos</h1>
                             <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
-                            <a href="">Reservar Mesa</a>
+                            <a class="text-red-600 font-medium underline" href="">RESERVAR MESA</a>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@
             <div class="">
                 <div class="">
                     <div class="">
-                        <a href="">Fazer Reserva</a>
+                        <a class="bg-red-600 text-white font-medium" href="">Fazer Reserva</a>
                         <h1>Aprecie uma jornada excepcional de gostos</h1>
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem voluptates pariatur omnis a minima doloremque, dolore dolor sit velit enim cupiditate! Soluta ab consectetur fugit velit, asperiores aperiam voluptatem? Quidem.</p>
                         <a href="">Explore nossa categoria</a>
