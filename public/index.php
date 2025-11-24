@@ -15,7 +15,7 @@ use App\Controllers\Site\{
 use App\Controllers\Admin\{
 	PratoController, 
 	ReservaController as AdminReservaController, 
-	PedidoController, DashboardController
+	PedidoController, DashboardController, ClienteController
 };
 
 use App\Contracts\{ReservaInterface, 
@@ -57,6 +57,11 @@ $router->get('/sobre', [SobreController::class, 'index']);
 $router->get('/contacto', [ContactoController::class, 'index']);
 
 //admin controllers
+$router->get('/admin/cliente', [ClienteController::class, 'index']);
+$router->get('/admin/cliente/update/{id}', [ClienteController::class, 'update']);
+$router->post('/admin/cliente/update/{id}', [ClienteController::class, 'update']);
+$router->get('/admin/cliente/delete/{id}', [ClienteController::class, 'delete']);
+$router->post('/admin/cliente/delete/{id}', [ClienteController::class, 'delete']);
 $router->get('/admin/reservas', [AdminReservaController::class, 'index']);
 $router->get('/admin/pratos', [PratoController::class, 'index']);
 $router->post('/admin/pratos/create', [PratoController::class, 'create']);

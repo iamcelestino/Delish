@@ -24,13 +24,13 @@
                 <img src="/images/logo.svg" alt="">
             </div>
             <nav class="">
-                <ul class="">
+                <ul class="flex">
                     <li class=""><a href="">Home</a></li>
-                    <li class=""><a href="">Menu</a></li>
-                    <li class=""><a href="">Reservas</a></li>
-                    <li class=""><a href="">Equipa</a></li>
-                    <li class=""><a href="">Sobre Nos</a></li>
-                    <li class=""><a href="">Contacto</a></li>
+                    <li class="ml-2"><a href="">Menu</a></li>
+                    <li class="ml-2"><a href="">Reservas</a></li>
+                    <li class="ml-2"><a href="">Equipa</a></li>
+                    <li class="ml-2"><a href="">Sobre Nos</a></li>
+                    <li class="ml-2"><a href="">Contacto</a></li>
                 </ul>
             </nav>
             <div class="">

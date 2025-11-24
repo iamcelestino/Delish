@@ -23,8 +23,4 @@ class PratoController extends Controller
         }
     }
 
-    public function update(): void
-    {
-
-    }
 }

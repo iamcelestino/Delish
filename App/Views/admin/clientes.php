@@ -40,7 +40,8 @@
                             <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"></th>
                         </tr>
                     </thead>
-
+                    <?php if($clientes): ?>
+                        <?php foreach($clientes as $cliente): ?>
                     <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
                                 <td class="px-6 py-4 whitespace-nowrap"></td>
@@ -50,7 +51,10 @@
                                 <td class="px-6 py-4 whitespace-nowrap"></td>
                                 <td class="px-6 py-4 whitespace-nowrap"></td> 
                                 <td class="px-6 py-4 whitespace-nowrap">
-                                    <a href="/admin/pedidos/create/<?= $reserva->id_reserva ?></a>
+                                    <<a href="/admin/cliente/update/<?=$cliente->id_cliente;?>" title="">editar</a>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <<a href="/admin/cliente/delete/<?=$cliente->id_cliente;?>" title="">apagar</a>
                                 </td>
                             </tr>
                     </tbody>
@@ -58,7 +62,6 @@
                     <?php else: ?>
                         <tbody class="bg-white divide-y divide-gray-200">
                             <tr>
-
                                 <td class="px-6 py-4 whitespace-nowrap"></td>
                                 <td class="px-6 py-4 whitespace-nowrap"></td>
                                 <td class="px-6 py-4 whitespace-nowrap"></td>
@@ -68,6 +71,7 @@
                                 </td>
                             </tr>
                         </tbody>
+                    <?php endif ?>
                 </table>
             </div>
         </div>
