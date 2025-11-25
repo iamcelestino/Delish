@@ -64,7 +64,12 @@ $router->get('/admin/cliente/delete/{id}', [ClienteController::class, 'delete'])
 $router->post('/admin/cliente/delete/{id}', [ClienteController::class, 'delete']);
 $router->get('/admin/reservas', [AdminReservaController::class, 'index']);
 $router->get('/admin/pratos', [PratoController::class, 'index']);
+$router->get('/admin/prato/create', [PratoController::class, 'create']);
 $router->post('/admin/pratos/create', [PratoController::class, 'create']);
+$router->get('/admin/prato/update/{id}', [PratoController::class, 'update']);
+$router->post('/admin/prato/update/{id}', [PratoController::class, 'update']);
+$router->get('/admin/prato/delete/{id}', [PratoController::class, 'delete']);
+$router->post('/admin/prato/delete/{id}', [PratoController::class, 'delete']);
 $router->get('/admin/pedidos', [PedidoController::class, 'index']);
 $router->get('/admin/pedidos/create/{id}', [PedidoController::class, 'create']);
 $router->post('/admin/pedidos/create/{id}', [PedidoController::class, 'create']);

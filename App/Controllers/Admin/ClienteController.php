@@ -15,8 +15,6 @@ class ClienteController extends Controller
 	{
 		$cliente = $this->cliente->getAllClientes();
 
-		print_r($cliente);
-
 		$this->view('Admin/clientes', [
 			'clientes' => $cliente
 		]);
