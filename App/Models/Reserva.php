@@ -37,7 +37,7 @@ class Reserva extends Model implements ReservaInterface
 
     public function getSingleReserva(int $idReserva): array|object
     {
-                return $this->query(
+        return $this->query(
             "SELECT 
                 r.id_reserva,
                 r.data_reserva,

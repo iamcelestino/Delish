@@ -19,4 +19,22 @@ class ReservaController extends Controller
             'reservas' => $reservas
         ]);
     }
+
+    public function update(int $id): void 
+    {
+        if (!$id) {
+            echo "This id doesn't exist";
+        }
+
+        $reserva = $this->reservas->getSingleReserva($id);
+        
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $this->reservas->update($id, $_POST);
+        }
+
+        $this->view('Admin/editar_reserva', [
+            'reserva' => $reserva[0]
+        ]);
+    }
+
 }

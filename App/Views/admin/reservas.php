@@ -54,6 +54,12 @@
                                 <td class="px-6 py-4 whitespace-nowrap">
                                     <a href="/admin/pedidos/create/<?= $reserva->id_reserva ?>">Fazer Pedido</a>
                                 </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <a href="/admin/reserva/update/<?= $reserva->id_reserva ?>">Editar</a>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <a href="/admin/reserva/delete/<?= $reserva->id_reserva ?>">Deletar</a>
+                                </td>
                             </tr>
                     </tbody>
                         <?php endforeach ?>

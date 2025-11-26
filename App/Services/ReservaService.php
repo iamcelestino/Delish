@@ -49,6 +49,16 @@ class ReservaService
         }
     }
 
+    public function update(int $id, array $dataReserva): void 
+    {
+        $this->reserva->update($id, $dataReserva);
+    }
+
+    public function getSingleReserva(int $id): array|object
+    {
+        return $this->reserva->getSingleReserva($id);
+    }
+
     public function getReservas(): array|object
     {
         return $this->reserva->getReservas();
@@ -59,8 +69,4 @@ class ReservaService
         return $this->reserva->getReservasPendentes();
     }
 
-    public function update(int $id, $dadosReserva): void
-    {
-
-    }
 }

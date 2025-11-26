@@ -21,10 +21,5 @@ class ReservaController extends Controller
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $this->reserva->create($_POST);
         }
-    }
-
-    public function update(): void
-    {
-        
-    }
+    }  
 }
